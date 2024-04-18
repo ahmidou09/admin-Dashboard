@@ -52,6 +52,7 @@ html {
 
 body {
   font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
 }
 
 

@@ -2,8 +2,8 @@ import React from "react";
 import { Outlet } from "react-router-dom";
 import styled from "styled-components";
 import NavBar from "../components/navbar/NavBar";
-import Menu from "../components/navbar/Menu";
-import Footer from "../components/navbar/Footer";
+import Menu from "../components/menu/Menu";
+import Footer from "../components/footer/Footer";
 
 const StyledAppLayout = styled.div`
   background-color: var(--color-primary-3);
@@ -12,8 +12,6 @@ const StyledAppLayout = styled.div`
 
 const MainContainer = styled.main`
   display: flex;
-  gap: 2rem;
-  padding: 2rem;
 `;
 
 function AppLayout() {

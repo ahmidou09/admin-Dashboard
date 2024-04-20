@@ -13,6 +13,12 @@ const NavbarContainer = styled.div`
   background-color: var(--color-primary-3);
   border-bottom: 1px solid var(--color-lines);
   padding: 2rem;
+  position: sticky;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  right: 0;
 
   .logo {
     display: flex;

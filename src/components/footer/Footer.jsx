@@ -9,6 +9,7 @@ const FooterContiner = styled.div`
   justify-content: space-between;
   padding: 2rem;
   font-size: 1.4rem;
+  height: 8rem;
 `;
 
 function Footer() {

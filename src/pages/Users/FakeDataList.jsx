@@ -1,7 +1,7 @@
 const generateFakeData = () => {
   const data = [];
 
-  for (let i = 0; i < 22; i++) {
+  for (let i = 0; i < 8; i++) {
     data.push({
       id: i + 1,
       image: `https://avatar.iran.liara.run/public/${i + 1}`,

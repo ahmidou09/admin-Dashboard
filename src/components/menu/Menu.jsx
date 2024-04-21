@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { menuData } from "./data.jsx";
+import { menuData } from "./menuData.jsx";
 
 const MenuContainer = styled.div`
   border-right: 1px solid var(--color-lines);
@@ -23,7 +23,7 @@ const MenuContainer = styled.div`
         display: flex;
         align-items: center;
         gap: 1.6rem;
-        margin-bottom: 2rem;
+        margin-bottom: 1.2rem;
         margin-left: 1rem;
         transition: all 0.2s ease-in-out;
 

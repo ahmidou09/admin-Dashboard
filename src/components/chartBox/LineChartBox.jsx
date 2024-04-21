@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { LineChart, Line, Tooltip, ResponsiveContainer } from "recharts";
 
-const ChartBoxContainer = styled.div`
+const LineChartBoxContainer = styled.div`
   display: flex;
   padding: 0.5rem;
 
@@ -49,9 +49,9 @@ const ChartBoxContainer = styled.div`
   }
 `;
 
-function ChartBox({ percentage, value, title, icon, color, dataChart }) {
+function LineChartBox({ percentage, value, title, icon, color, dataChart }) {
   return (
-    <ChartBoxContainer>
+    <LineChartBoxContainer>
       <div className="boxInfo">
         <div className="title">
           {icon}
@@ -89,15 +89,20 @@ function ChartBox({ percentage, value, title, icon, color, dataChart }) {
         <div className="texts">
           <span
             className="percentage"
-            style={{ color: percentage > 0 ? "green" : "red" }}
+            style={{
+              color:
+                percentage > 0
+                  ? "var(--color-green-1)"
+                  : "var(--color-button-red-1)",
+            }}
           >
             {percentage}%
           </span>
           <span className="duration">this month</span>
         </div>
       </div>
-    </ChartBoxContainer>
+    </LineChartBoxContainer>
   );
 }
 
-export default ChartBox;
+export default LineChartBox;

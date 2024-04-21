@@ -1,5 +1,33 @@
 import React, { useState } from "react";
 import { GrNext, GrPrevious } from "react-icons/gr";
+import styled from "styled-components";
+
+const PaginationContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  padding: 0 4rem;
+
+  .page-info {
+    font-size: 1.4rem;
+    color: var(--color-white-2);
+    width: 5rem;
+    flex: 1;
+    text-align: center;
+  }
+
+  button {
+    background-color: transparent;
+    border: none;
+    color: var(--color-white-2);
+    font-size: 2rem;
+  }
+`;
 
 const Pagination = ({ totalItems, itemsPerPage, onPageChange }) => {
   const [currentPage, setCurrentPage] = useState(0);
@@ -18,14 +46,17 @@ const Pagination = ({ totalItems, itemsPerPage, onPageChange }) => {
   };
 
   return (
-    <div className="pagination">
+    <PaginationContainer>
       <button onClick={goToPreviousPage} disabled={currentPage === 0}>
         <GrPrevious />
       </button>
+      <span className="page-info">{`Page ${
+        currentPage + 1
+      } of ${pageCount}`}</span>
       <button onClick={goToNextPage} disabled={currentPage === pageCount - 1}>
         <GrNext />
       </button>
-    </div>
+    </PaginationContainer>
   );
 };
 

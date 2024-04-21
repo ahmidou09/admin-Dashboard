@@ -12,6 +12,8 @@ const GlobalStyles = createGlobalStyle`
   --color-teal-1: #3C9D93;
   --color-purple-1 : #263B50;
   --color-purple-2 : #5565E8;
+  --color-green-1: #32CD32;
+  --color-red-1: ##FF6347;
 
   /* color accent */
   --color-accent-1: #C98BDF;

@@ -4,7 +4,7 @@ import styled from "styled-components";
 const FooterContiner = styled.div`
   display: flex;
   height: 4rem;
-  background-color: var(--color-primary-2);
+  background-color: var(--color-primary-3);
   align-items: center;
   justify-content: space-between;
   padding: 2rem;

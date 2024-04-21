@@ -15,7 +15,7 @@ const UsersBoxContainer = styled.div`
       gap: 1rem;
       padding-bottom: 1rem;
       border-bottom: 1px solid var(--color-lines);
-      margin-bottom: 1rem;
+      margin-bottom: 1.6rem;
 
       .user_image {
         width: 6rem;
@@ -33,27 +33,9 @@ const UsersBoxContainer = styled.div`
         p {
           font-size: 1.4rem;
           color: var(--color-white-2);
-          line-height: 1.4;
           font-weight: 200;
         }
       }
-    }
-  }
-  .pagination {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 4rem;
-    position: absolute;
-    bottom: 2rem;
-    left: 50%;
-    transform: translateX(-50%);
-
-    button {
-      background-color: transparent;
-      border: none;
-      color: var(--color-white-2);
-      font-size: 2rem;
     }
   }
 `;

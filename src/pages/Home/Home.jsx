@@ -1,8 +1,8 @@
 import React from "react";
-import Footer from "../../components/footer/Footer";
 import styled from "styled-components";
 import UsersBox from "../../components/UsersBox/UsersBox";
-import ChartBox from "../../components/chartBox/ChartBox";
+import ChartBox from "../../components/chartBox/LineChartBox";
+import AreaChartBox from "../../components/chartBox/AreaChartBox";
 import { FaUsers, FaShoppingCart, FaChartBar } from "react-icons/fa";
 import { IoAppsSharp } from "react-icons/io5";
 import {
@@ -10,7 +10,11 @@ import {
   dataChart_2,
   dataChart_3,
   dataChart_4,
+  dataChart_5,
+  dataChart_6,
 } from "../../components/chartBox/dataChartBox";
+import TinyBarChartBox from "../../components/chartBox/TinyBarChartBox";
+import ShapePieChartBox from "../../components/chartBox/ShapePieChartBox";
 
 const HomeContainer = styled.div`
   width: 100%;
@@ -18,7 +22,7 @@ const HomeContainer = styled.div`
   .layoutContainer {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, minmax(180px, 200px));
+    grid-template-rows: repeat(4, minmax(16rem, auto));
     gap: 2rem;
     padding: 2rem;
 
@@ -79,7 +83,9 @@ function Home() {
             icon={<FaShoppingCart />}
           />
         </div>
-        <div className="box box_4">box 4</div>
+        <div className="box box_4">
+          <ShapePieChartBox />
+        </div>
         <div className="box box_5">
           <ChartBox
             dataChart={dataChart_3}
@@ -93,18 +99,31 @@ function Home() {
         <div className="box box_6">
           <ChartBox
             dataChart={dataChart_4}
-            color="var(--color-button-p-3)"
+            color="var(--color-accent-1)"
             value={"57.238"}
             percentage={28}
             title="Total Sales"
             icon={<FaChartBar />}
           />
         </div>
-        <div className="box box_7">box 7</div>
-        <div className="box box_8">box 8</div>
-        <div className="box box_9">box 9</div>
+        <div className="box box_7">
+          <AreaChartBox />
+        </div>
+        <div className="box box_8">
+          <TinyBarChartBox
+            color={"var(--color-accent-1)"}
+            data={dataChart_5}
+            title={"Total Orders"}
+          />
+        </div>
+        <div className="box box_9">
+          <TinyBarChartBox
+            color={"var(--color-accent-4)"}
+            data={dataChart_6}
+            title={"Profit Earned"}
+          />
+        </div>
       </div>
-      <Footer />
     </HomeContainer>
   );
 }

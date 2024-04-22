@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { dataArray } from "../../pages/Users/FakeDataList";
+import { userData } from "../../pages/Users/userData";
 import Pagination from "../../ui/Pagination";
 import styled from "styled-components";
 
@@ -15,7 +15,7 @@ const UsersBoxContainer = styled.div`
       gap: 1rem;
       padding-bottom: 1rem;
       border-bottom: 1px solid var(--color-lines);
-      margin-bottom: 1.6rem;
+      margin-bottom: 1rem;
 
       .user_image {
         width: 6rem;
@@ -43,7 +43,7 @@ function UsersBox() {
   const usersPerPage = 6;
   const [currentPage, setCurrentPage] = useState(0);
 
-  const usersToShow = dataArray.slice(
+  const usersToShow = userData.slice(
     currentPage * usersPerPage,
     (currentPage + 1) * usersPerPage
   );
@@ -70,7 +70,7 @@ function UsersBox() {
         ))}
       </div>
       <Pagination
-        totalItems={dataArray.length}
+        totalItems={userData.length}
         itemsPerPage={usersPerPage}
         onPageChange={(page) => setCurrentPage(page)}
       />

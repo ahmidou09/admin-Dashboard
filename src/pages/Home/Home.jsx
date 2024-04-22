@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import UsersBox from "../../components/UsersBox/UsersBox";
-import ChartBox from "../../components/chartBox/LineChartBox";
+import LineChartBox from "../../components/chartBox/LineChartBox";
 import AreaChartBox from "../../components/chartBox/AreaChartBox";
 import { FaUsers, FaShoppingCart, FaChartBar } from "react-icons/fa";
 import { IoAppsSharp } from "react-icons/io5";
@@ -18,6 +18,7 @@ import ShapePieChartBox from "../../components/chartBox/ShapePieChartBox";
 
 const HomeContainer = styled.div`
   width: 100%;
+  background-color: var(--color-primary-3);
 
   .layoutContainer {
     display: grid;
@@ -51,7 +52,15 @@ const HomeContainer = styled.div`
 
     .box_7 {
       grid-column: 2 / span 2;
-      grid-row: 3 / span 2;
+      grid-row: 3 / span 3;
+    }
+
+    .box_8 {
+      grid-row: 4 / span 2;
+    }
+
+    .box_9 {
+      grid-row: 4 / span 2;
     }
   }
 `;
@@ -64,7 +73,7 @@ function Home() {
           <UsersBox />
         </div>
         <div className="box box_2">
-          <ChartBox
+          <LineChartBox
             dataChart={dataChart_1}
             color="var(--color-teal-1)"
             percentage={70}
@@ -74,7 +83,7 @@ function Home() {
           />
         </div>
         <div className="box box_3">
-          <ChartBox
+          <LineChartBox
             dataChart={dataChart_2}
             color="var(--color-purple-2)"
             value={"11.238"}
@@ -87,7 +96,7 @@ function Home() {
           <ShapePieChartBox />
         </div>
         <div className="box box_5">
-          <ChartBox
+          <LineChartBox
             dataChart={dataChart_3}
             color="var(--color-accent-4)"
             value={"87.238"}
@@ -97,7 +106,7 @@ function Home() {
           />
         </div>
         <div className="box box_6">
-          <ChartBox
+          <LineChartBox
             dataChart={dataChart_4}
             color="var(--color-accent-1)"
             value={"57.238"}

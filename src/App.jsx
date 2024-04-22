@@ -5,6 +5,7 @@ import AppLayout from "./ui/AppLayout";
 import Products from "./pages/Products/Products";
 import Users from "./pages/Users/Users";
 import Login from "./pages/Log/Login";
+import UserSingel from "./pages/Users/UserSingel";
 
 function App() {
   return (
@@ -14,9 +15,8 @@ function App() {
           <Route path="/" element={<AppLayout />}>
             <Route index element={<Home />} />
             <Route path="/products" element={<Products />} />
-            <Route path="/users/" element={<Users />}>
-              <Route path=":id" element={<Users />} />
-            </Route>
+            <Route path="/users/" element={<Users />} />
+            <Route path="users/:id" element={<UserSingel />} />
           </Route>
           <Route path="/login" element={<Login />} />
         </Routes>

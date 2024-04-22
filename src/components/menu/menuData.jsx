@@ -18,7 +18,7 @@ export const menuData = [
     sectionTitle: "Main",
     items: [
       { path: "/", icon: <IoMdHome />, title: "Home" },
-      { path: "/users/", icon: <FaUser />, title: "Profile" },
+      { path: "/users/1", icon: <FaUser />, title: "Profile" },
     ],
   },
   {

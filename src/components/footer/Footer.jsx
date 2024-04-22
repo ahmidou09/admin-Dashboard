@@ -4,12 +4,16 @@ import styled from "styled-components";
 const FooterContiner = styled.div`
   display: flex;
   height: 4rem;
-  background-color: var(--color-primary-3);
+  background-color: var(--color-primary-2);
   align-items: center;
   justify-content: space-between;
   padding: 2rem;
   font-size: 1.4rem;
   height: 8rem;
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  border-top: 1px solid var(--color-lines);
 `;
 
 function Footer() {

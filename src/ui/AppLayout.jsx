@@ -6,7 +6,7 @@ import Menu from "../components/menu/Menu";
 import Footer from "../components/footer/Footer";
 
 const StyledAppLayout = styled.div`
-  background-color: var(--color-primary-3);
+  background-color: var(--color-primary-2);
   color: var(--color-white);
 `;
 

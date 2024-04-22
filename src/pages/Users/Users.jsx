@@ -8,7 +8,7 @@ const UsersContainer = styled.div`
 function Users() {
   return (
     <UsersContainer>
-      <h1>Users</h1>
+      <div>Users</div>
     </UsersContainer>
   );
 }

@@ -6,6 +6,7 @@ import Products from "./pages/Products/Products";
 import Users from "./pages/Users/Users";
 import Login from "./pages/Log/Login";
 import UserSingel from "./pages/Users/UserSingel";
+import ProductsSingle from "./pages/Products/ProductsSingle";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/" element={<AppLayout />}>
             <Route index element={<Home />} />
             <Route path="/products" element={<Products />} />
+            <Route path="/products/:id" element={<ProductsSingle />} />
             <Route path="/users/" element={<Users />} />
             <Route path="users/:id" element={<UserSingel />} />
           </Route>

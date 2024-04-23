@@ -80,6 +80,7 @@ function Home() {
             value={"30.238"}
             title="Total Users"
             icon={<FaUsers />}
+            link={"/users"}
           />
         </div>
         <div className="box box_3">
@@ -90,6 +91,7 @@ function Home() {
             percentage={-40}
             title="Total Products"
             icon={<FaShoppingCart />}
+            link={"/products"}
           />
         </div>
         <div className="box box_4">

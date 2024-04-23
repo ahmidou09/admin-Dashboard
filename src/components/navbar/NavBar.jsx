@@ -5,6 +5,7 @@ import { FaSearch, FaExpand } from "react-icons/fa";
 import { IoAppsSharp, IoSettingsOutline } from "react-icons/io5";
 
 import { IoIosNotifications } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 const NavbarContainer = styled.div`
   display: flex;
@@ -105,10 +106,12 @@ const NavbarContainer = styled.div`
 function NavBar() {
   return (
     <NavbarContainer>
-      <div className="logo">
-        <img src={logo} alt="Company logo" />
-        <span>Ahd</span>
-      </div>
+      <Link to="/">
+        <div className="logo">
+          <img src={logo} alt="Company logo" />
+          <span>Ahd</span>
+        </div>
+      </Link>
       <ul className="icons">
         <li className="icons_item">
           <FaSearch />
@@ -124,10 +127,12 @@ function NavBar() {
           <span>1</span>
         </li>
         <li className="icons_item icons_profile">
-          <img
-            src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-            alt="profile"
-          />
+          <Link to="/users/1">
+            <img
+              src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+              alt="profile"
+            />
+          </Link>
           <span>John Doe</span>
         </li>
         <li className="icons_item">

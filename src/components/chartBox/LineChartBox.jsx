@@ -49,7 +49,15 @@ const LineChartBoxContainer = styled.div`
   }
 `;
 
-function LineChartBox({ percentage, value, title, icon, color, dataChart }) {
+function LineChartBox({
+  percentage,
+  value,
+  title,
+  icon,
+  color,
+  dataChart,
+  link,
+}) {
   return (
     <LineChartBoxContainer>
       <div className="boxInfo">
@@ -58,7 +66,7 @@ function LineChartBox({ percentage, value, title, icon, color, dataChart }) {
           <span>{title}</span>
         </div>
         <h1>{value}</h1>
-        <Link to="/" style={{ color }}>
+        <Link to={link} style={{ color }}>
           View all
         </Link>
       </div>

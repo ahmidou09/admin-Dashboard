@@ -1,16 +1,89 @@
 const generateFakeData = () => {
   const data = [];
 
-  for (let i = 0; i < 33; i++) {
+  // Sample first and last names
+  const firstNames = [
+    "James",
+    "Mary",
+    "John",
+    "Patricia",
+    "Robert",
+    "Jennifer",
+    "Michael",
+    "Linda",
+    "William",
+    "Elizabeth",
+    "David",
+    "Barbara",
+    "Richard",
+    "Susan",
+    "Joseph",
+    "Jessica",
+  ];
+  const lastNames = [
+    "Smith",
+    "Johnson",
+    "Williams",
+    "Brown",
+    "Jones",
+    "Garcia",
+    "Miller",
+    "Davis",
+    "Rodriguez",
+    "Martinez",
+    "Hernandez",
+    "Lopez",
+    "Wilson",
+    "Anderson",
+    "Thomas",
+    "Taylor",
+  ];
+
+  // Sample email domains
+  const emailDomains = [
+    "yahoo.com",
+    "gmail.com",
+    "oracle.net",
+    "outlook.org",
+    "wikipedia.edu",
+  ];
+
+  // Function to generate a random date within the last 10 years
+  const randomDate = (start, end) => {
+    return new Date(
+      start.getTime() + Math.random() * (end.getTime() - start.getTime())
+    );
+  };
+
+  // Function to generate a random full name
+  const randomFullName = () => {
+    const firstName = firstNames[Math.floor(Math.random() * firstNames.length)];
+    const lastName = lastNames[Math.floor(Math.random() * lastNames.length)];
+    return `${firstName} ${lastName}`;
+  };
+
+  // Function to generate a random email
+  const randomEmail = (firstName, lastName) => {
+    const domain =
+      emailDomains[Math.floor(Math.random() * emailDomains.length)];
+    const emailLocalPart = `${firstName.toLowerCase()}.${lastName.toLowerCase()}`;
+    return `${emailLocalPart}@${domain}`;
+  };
+
+  for (let i = 0; i < 180; i++) {
+    const fullName = randomFullName();
+    const [firstName, lastName] = fullName.split(" ");
+
     data.push({
       id: i + 1,
       image: `https://avatar.iran.liara.run/public/${i + 1}.png`,
-      fullName: `Full Name ${i + 1}`,
+      fullName: fullName,
       username: `user${i + 1}`,
-      phone: `123456789${i + 1}`,
-      email: `user${i + 1}@example.com`,
-      status: i % 2 === 0 ? "verified" : "unverified",
+      phone: `+${Math.floor(Math.random() * 10000)}3456789${i + 1}`,
+      email: randomEmail(firstName, lastName),
+      status: i % 3 === 0 ? true : false,
       price: `$${(Math.random() * 100).toFixed(2)}`,
+      createdAt: randomDate(new Date(2013, 0, 1), new Date()).toDateString(),
       activities: [
         {
           activitie: "purchased Playstation 5 Digital Edition",

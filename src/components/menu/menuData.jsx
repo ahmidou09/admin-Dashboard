@@ -26,8 +26,8 @@ export const menuData = [
     items: [
       { path: "/users", icon: <FaUsers />, title: "Users" },
       { path: "/products", icon: <FaShoppingCart />, title: "Products" },
-      { path: "/orders", icon: <FaBorderAll />, title: "Orders" },
-      { path: "/posts", icon: <FaSignsPost />, title: "Posts" },
+      { path: "/", icon: <FaBorderAll />, title: "Orders" },
+      { path: "/", icon: <FaSignsPost />, title: "Posts" },
     ],
   },
   {

@@ -23,9 +23,28 @@ const HomeContainer = styled.div`
   .layoutContainer {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, minmax(16rem, auto));
+    grid-template-rows: repeat(4, minmax(16rem, min-content));
     gap: 2rem;
     padding: 2rem;
+
+    @media screen and (max-width: 1360px) {
+      grid-template-columns: repeat(3, minmax(min-content, 1fr));
+      grid-template-rows: repeat(5, minmax(16rem, min-content));
+    }
+
+    @media screen and (max-width: 900px) {
+      grid-template-columns: repeat(2, minmax(min-content, 1fr));
+      grid-template-rows: repeat(6, minmax(16rem, min-content));
+    }
+
+    @media screen and (max-width: 720px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(8, minmax(16rem, min-content));
+    }
+
+    @media screen and (max-width: 500px) {
+      padding: 1rem;
+    }
 
     .box {
       background-color: var(--color-primary-2);
@@ -33,34 +52,127 @@ const HomeContainer = styled.div`
       border: 1px solid var(--color-lines);
       padding: 1rem;
       border-radius: 1rem;
+
+      @media screen and (max-width: 720px) {
+        grid-column: 1 / span 1 !important;
+      }
     }
 
     .box_1 {
       grid-column: 1 / span 1;
       grid-row: 1 / span 3;
       position: relative;
+
+      @media screen and (max-width: 1360px) {
+        grid-row: 1 / span 2;
+      }
     }
 
     .box_2 {
       grid-column: 2 / span 1;
+
+      @media screen and (max-width: 1360px) {
+        grid-column: 2 / span 1;
+      }
+
+      @media screen and (max-width: 720px) {
+        grid-row: 3 / span 1;
+      }
+    }
+
+    .box_3 {
+      @media screen and (max-width: 1360px) {
+        grid-column: 3 / span 1;
+
+        @media screen and (max-width: 900px) {
+          grid-column: 2 / span 1;
+        }
+
+        @media screen and (max-width: 720px) {
+          grid-row: 4 / span 1;
+        }
+      }
     }
 
     .box_4 {
       grid-column: 4 / span 1;
       grid-row: 1 / span 3;
+
+      @media screen and (max-width: 1360px) {
+        grid-column: 2 / span 2;
+        grid-row: 4 / span 2;
+      }
+
+      @media screen and (max-width: 900px) {
+        display: none;
+      }
+    }
+
+    .box_5 {
+      @media screen and (max-width: 1360px) {
+        grid-column: 2 / span 1;
+
+        @media screen and (max-width: 900px) {
+          grid-column: 1 / span 1;
+        }
+
+        @media screen and (max-width: 720px) {
+          grid-row: 5 / span 1;
+        }
+      }
+    }
+
+    .box_6 {
+      @media screen and (max-width: 900px) {
+        grid-column: 2 / span 1;
+      }
+
+      @media screen and (max-width: 720px) {
+        grid-row: 6 / span 1;
+      }
     }
 
     .box_7 {
       grid-column: 2 / span 2;
       grid-row: 3 / span 3;
+
+      @media screen and (max-width: 1360px) {
+        grid-row: 3 / span 1;
+      }
+
+      @media screen and (max-width: 900px) {
+        display: none;
+      }
     }
 
     .box_8 {
       grid-row: 4 / span 2;
+
+      @media screen and (max-width: 1360px) {
+        grid-column: 1 / span 1;
+        grid-row: 3 / span 1;
+      }
+
+      @media screen and (max-width: 900px) {
+        grid-column: 2 / span 1;
+      }
+
+      @media screen and (max-width: 720px) {
+        grid-row: 8 / span 1;
+      }
     }
 
     .box_9 {
       grid-row: 4 / span 2;
+
+      @media screen and (max-width: 1360px) {
+        grid-column: 1 / span 1;
+        grid-row: 3 / span 1;
+      }
+
+      @media screen and (max-width: 720px) {
+        grid-row: 7 / span 1;
+      }
     }
   }
 `;

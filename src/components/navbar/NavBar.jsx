@@ -35,6 +35,10 @@ const NavbarContainer = styled.div`
       color: var(--color-white);
       align-self: end;
       font-size: 1.6rem;
+
+      @media screen and (max-width: 400px) {
+        display: none;
+      }
     }
   }
   .icons {
@@ -97,6 +101,14 @@ const NavbarContainer = styled.div`
       }
     }
 
+    @media screen and (max-width: 720px) {
+      .search,
+      .appsSharp,
+      .expand {
+        display: none;
+      }
+    }
+
     span {
       font-weight: 400;
     }
@@ -113,13 +125,13 @@ function NavBar() {
         </div>
       </Link>
       <ul className="icons">
-        <li className="icons_item">
+        <li className="icons_item search">
           <FaSearch />
         </li>
-        <li className="icons_item">
+        <li className="icons_item appsSharp">
           <IoAppsSharp />
         </li>
-        <li className="icons_item">
+        <li className="icons_item expand">
           <FaExpand />
         </li>
         <li className="icons_item icons_notification">

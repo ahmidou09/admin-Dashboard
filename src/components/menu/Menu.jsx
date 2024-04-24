@@ -8,11 +8,19 @@ const MenuContainer = styled.div`
   padding: 2rem;
   min-width: 18rem;
 
+  @media screen and (max-width: 920px) {
+    min-width: 8rem;
+  }
+
   .menu {
     display: flex;
     flex-direction: column;
     gap: 2rem;
     position: fixed;
+
+    @media screen and (max-width: 920px) {
+      position: static;
+    }
 
     .item {
       display: flex;
@@ -39,6 +47,10 @@ const MenuContainer = styled.div`
         &_title {
           text-transform: capitalize;
           font-weight: 200;
+
+          @media screen and (max-width: 920px) {
+            display: none;
+          }
         }
       }
 

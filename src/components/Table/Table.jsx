@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { useState } from "react";
 import { GrNext, GrPrevious } from "react-icons/gr";
+import { MdArrowDropUp, MdArrowDropDown } from "react-icons/md";
 
 const TableStyled = styled.table`
   width: 100%;
@@ -20,7 +21,35 @@ const Thead = styled.thead`
 `;
 
 const Th = styled.th`
-  padding: 1.2rem 1.5rem;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+
+  .columnTitle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    width: 100%;
+    border-right: 1px solid var(--color-white-2);
+
+    .sortIcon {
+      color: var(--color-white);
+      flex-direction: column;
+      display: flex;
+      align-items: center;
+      width: 2.2rem;
+      height: 2.2rem;
+      transform: translateY(1px);
+
+      svg {
+        display: none;
+        font-size: 1.7rem;
+      }
+    }
+  }
+  &:hover .sortIcon svg {
+    display: block;
+  }
 `;
 
 const Tbody = styled.tbody`
@@ -68,12 +97,34 @@ const PaginationNextPrevious = styled.button`
 
 const TableItems = ({ data, columns, renderItem, itemPerPage = 8 }) => {
   const [currentPage, setCurrentPage] = useState(1);
+  const [sortField, setSortField] = useState("fullName");
+  const [sortDirection, setSortDirection] = useState("asc");
+
+  const sortedData = [...data].sort((a, b) => {
+    if (a[sortField] < b[sortField]) {
+      return sortDirection === "asc" ? -1 : 1;
+    }
+    if (a[sortField] > b[sortField]) {
+      return sortDirection === "asc" ? 1 : -1;
+    }
+    return 0;
+  });
+
   const indexOfLastItem = currentPage * itemPerPage;
   const indexOfFirstItem = indexOfLastItem - itemPerPage;
-  const currentItems = data.slice(indexOfFirstItem, indexOfLastItem);
+  const currentItems = sortedData.slice(indexOfFirstItem, indexOfLastItem);
   const totalPages = Math.ceil(data.length / itemPerPage);
 
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
+  const handleSort = (field) => {
+    if (field === sortField) {
+      setSortDirection(sortDirection === "asc" ? "desc" : "asc");
+    } else {
+      setSortField(field);
+      setSortDirection("asc");
+    }
+  };
 
   return (
     <>
@@ -81,7 +132,15 @@ const TableItems = ({ data, columns, renderItem, itemPerPage = 8 }) => {
         <Thead>
           <tr>
             {columns.map((column) => (
-              <Th key={column.key}>{column.title}</Th>
+              <Th key={column.key} onClick={() => handleSort(column.key)}>
+                <span className="columnTitle">
+                  {column.title}{" "}
+                  <span className="sortIcon">
+                    <MdArrowDropUp />
+                    <MdArrowDropDown />
+                  </span>
+                </span>
+              </Th>
             ))}
           </tr>
         </Thead>

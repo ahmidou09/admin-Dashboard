@@ -35,6 +35,12 @@ const UsersBoxContainer = styled.div`
           color: var(--color-white-2);
           font-weight: 200;
         }
+
+        .user_email {
+          @media screen and (max-width: 720px) {
+            display: none;
+          }
+        }
       }
     }
   }
@@ -60,7 +66,7 @@ function UsersBox() {
               <div className="user_info">
                 {" "}
                 <p>{user.fullName}</p>
-                <p>{user.email}</p>
+                <p className="user_email">{user.email}</p>
               </div>
               <div className="user_price">
                 <p>{user.price}</p>

@@ -7,6 +7,13 @@ const LineChartBoxContainer = styled.div`
   display: flex;
   padding: 0.5rem;
 
+  @media screen and (max-width: 1400px) {
+    flex-direction: column;
+    a {
+      align-self: flex-end;
+    }
+  }
+
   .boxInfo {
     flex: 1;
     display: flex;

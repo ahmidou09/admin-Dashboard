@@ -70,7 +70,7 @@ const generateFakeData = () => {
     return `${emailLocalPart}@${domain}`;
   };
 
-  for (let i = 0; i < 180; i++) {
+  for (let i = 0; i < 52; i++) {
     const fullName = randomFullName();
     const [firstName, lastName] = fullName.split(" ");
 

@@ -7,9 +7,15 @@ import styled from "styled-components";
 const UsersBoxContainer = styled.div`
   .user_container {
     padding: 2rem 1rem;
+    min-width: 40rem;
+
+    @media screen and (max-width: 1020px) {
+      min-width: min-content;
+    }
 
     @media screen and (max-width: 720px) {
       padding: 2rem 0.5rem;
+      min-width: min-content;
     }
 
     .user {

@@ -3,9 +3,11 @@ import logo from "../../assets/logo.svg";
 import styled from "styled-components";
 import { FaSearch, FaExpand } from "react-icons/fa";
 import { IoAppsSharp, IoSettingsOutline } from "react-icons/io5";
-
+import { userData } from "../../pages/Users/userData";
 import { IoIosNotifications } from "react-icons/io";
 import { Link } from "react-router-dom";
+
+console.log(userData[0]);
 
 const NavbarContainer = styled.div`
   display: flex;
@@ -142,8 +144,8 @@ function NavBar() {
         </li>
         <li className="icons_item icons_profile">
           <Link to="/users/1">
-            <img src="https://avatar.iran.liara.run/public/1" alt="profile" />
-            <span>John Doe</span>
+            <img src={userData[0].image} alt="profile" />
+            <span>{userData[0].fullName}</span>
           </Link>
         </li>
         <li className="icons_item">

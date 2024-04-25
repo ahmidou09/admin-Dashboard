@@ -10,8 +10,21 @@ const UsersContainer = styled.div`
   min-height: calc(100vh - 16rem);
   padding: 2rem 4rem;
   position: relative;
-
   overflow-x: scroll;
+
+  &::-webkit-scrollbar {
+    height: 1rem;
+    background-color: var(--color-primary-3);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--color-primary-2);
+    border-radius: 1rem;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color-primary-1);
+  }
 
   .title {
     display: flex;

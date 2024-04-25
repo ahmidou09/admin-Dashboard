@@ -10,6 +10,7 @@ const ProductsContainer = styled.div`
   width: 100%;
   max-height: calc(100vh - 16rem);
   padding: 2rem 4rem;
+  overflow-x: scroll;
 
   .title {
     display: flex;

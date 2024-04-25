@@ -12,6 +12,8 @@ const TableStyled = styled.table`
   font-size: 1.4rem;
   min-width: 40rem;
   box-shadow: 0 0 2rem rgba(0, 0, 0, 0.15);
+
+  overflow-x: scroll;
 `;
 
 const Thead = styled.thead`

@@ -16,11 +16,6 @@ const MenuContainer = styled.div`
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    position: fixed;
-
-    @media screen and (max-width: 920px) {
-      position: static;
-    }
 
     .item {
       display: flex;

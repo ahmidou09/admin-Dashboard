@@ -11,6 +11,8 @@ const UsersContainer = styled.div`
   padding: 2rem 4rem;
   position: relative;
 
+  overflow-x: scroll;
+
   .title {
     display: flex;
     align-items: center;

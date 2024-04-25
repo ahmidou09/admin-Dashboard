@@ -8,14 +8,21 @@ const UsersBoxContainer = styled.div`
   .user_container {
     padding: 2rem 1rem;
 
+    @media screen and (max-width: 720px) {
+      padding: 2rem 0.5rem;
+    }
+
     .user {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
+      gap: 2rem;
       padding-bottom: 1rem;
       border-bottom: 1px solid var(--color-lines);
       margin-bottom: 1rem;
+
+      @media screen and (max-width: 720px) {
+        gap: 0.5rem;
+      }
 
       .user_image {
         width: 6rem;
@@ -26,19 +33,20 @@ const UsersBoxContainer = styled.div`
 
         img {
           border: 2px solid var(--color-teal-1);
-          width: 5rem;
-          height: 5rem;
+          width: 4rem;
+          height: 4rem;
           border-radius: 50%;
           object-fit: cover;
 
           @media screen and (max-width: 720px) {
-            width: 3rem;
-            height: 3rem;
+            width: 3.5rem;
+            height: 3.5rem;
           }
         }
       }
 
       .user_info {
+        margin-right: auto;
         p {
           font-size: 1.4rem;
           color: var(--color-white-2);
@@ -46,12 +54,6 @@ const UsersBoxContainer = styled.div`
 
           @media screen and (max-width: 720px) {
             font-size: 1.2rem;
-          }
-        }
-
-        .user_email {
-          @media screen and (max-width: 720px) {
-            display: none;
           }
         }
       }
@@ -79,7 +81,7 @@ function UsersBox() {
               <div className="user_info">
                 {" "}
                 <p>{user.fullName}</p>
-                <p className="user_email">{user.email}</p>
+                <p>{user.email}</p>
               </div>
               <div className="user_price">
                 <p>{user.price}</p>

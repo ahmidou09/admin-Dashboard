@@ -11,9 +11,6 @@ const FooterContiner = styled.div`
   padding: 2rem;
   font-size: 1.4rem;
   height: 8rem;
-  position: sticky;
-  bottom: 0;
-  width: 100%;
   border-top: 1px solid var(--color-lines);
 `;
 
@@ -28,7 +25,7 @@ function Footer() {
         </>
       ) : (
         <>
-          <span>MEHDI</span>
+          <span>Ahmidou</span>
           <span>Copyright © 2024.</span>
         </>
       )}

@@ -78,39 +78,41 @@ const NavbarContainer = styled.div`
     }
 
     &_profile {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
+      a {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
 
-      img {
-        width: 3.5rem;
-        height: 3.5rem;
-        border-radius: 50%;
-        cursor: pointer;
-        object-fit: cover;
-        border: 2px solid var(--color-white);
-        transition: all 0.3s ease-in-out;
-      }
-
-      &:hover {
         img {
-          transform: scale(1.1);
-          border: 2px solid var(--color-accent-1);
+          width: 3.5rem;
+          height: 3.5rem;
+          border-radius: 50%;
+          cursor: pointer;
+          object-fit: cover;
+          border: 2px solid var(--color-white);
           transition: all 0.3s ease-in-out;
         }
-      }
-    }
 
-    @media screen and (max-width: 720px) {
-      .search,
-      .appsSharp,
-      .expand {
-        display: none;
+        &:hover {
+          img {
+            transform: scale(1.1);
+            border: 2px solid var(--color-accent-1);
+            transition: all 0.3s ease-in-out;
+          }
+        }
       }
-    }
 
-    span {
-      font-weight: 400;
+      @media screen and (max-width: 720px) {
+        .search,
+        .appsSharp,
+        .expand {
+          display: none;
+        }
+      }
+
+      span {
+        font-weight: 400;
+      }
     }
   }
 `;
@@ -140,12 +142,9 @@ function NavBar() {
         </li>
         <li className="icons_item icons_profile">
           <Link to="/users/1">
-            <img
-              src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-              alt="profile"
-            />
+            <img src="https://avatar.iran.liara.run/public/1" alt="profile" />
+            <span>John Doe</span>
           </Link>
-          <span>John Doe</span>
         </li>
         <li className="icons_item">
           <IoSettingsOutline />

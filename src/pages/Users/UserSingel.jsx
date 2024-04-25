@@ -14,9 +14,14 @@ import {
 } from "recharts";
 
 const UserSingelContainer = styled.div`
-  height: 100vh;
+  height: 100%;
   width: 100%;
   padding: 2rem 4rem;
+
+  @media screen and (max-width: 720px) {
+    height: 100%;
+    padding: 0.5rem;
+  }
 `;
 
 const UserSinge = styled.div`
@@ -24,6 +29,10 @@ const UserSinge = styled.div`
   gap: 8rem;
   padding: 2rem;
   width: 100%;
+
+  @media screen and (max-width: 720px) {
+    flex-direction: column;
+  }
 
   .view {
     display: flex;
@@ -66,6 +75,10 @@ const UserSinge = styled.div`
         flex-direction: column;
         gap: 2rem;
         padding: 2rem;
+
+        @media screen and (max-width: 720px) {
+          padding: 0.5rem;
+        }
 
         &__item {
           display: flex;

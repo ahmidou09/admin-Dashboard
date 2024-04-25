@@ -14,9 +14,13 @@ import {
 } from "recharts";
 
 const ProductSingelContainer = styled.div`
-  height: 100vh;
+  height: 100%;
   width: 100%;
-  padding: 2rem 4rem;
+
+  @media screen and (max-width: 720px) {
+    padding: 0.5rem;
+    height: 100%;
+  }
 `;
 
 const ProductSinge = styled.div`
@@ -24,6 +28,10 @@ const ProductSinge = styled.div`
   gap: 8rem;
   padding: 2rem;
   width: 100%;
+
+  @media screen and (max-width: 720px) {
+    flex-direction: column;
+  }
 
   .view {
     display: flex;

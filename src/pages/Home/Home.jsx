@@ -34,16 +34,16 @@ const HomeContainer = styled.div`
 
     @media screen and (max-width: 900px) {
       grid-template-columns: repeat(2, minmax(min-content, 1fr));
-      grid-template-rows: repeat(6, minmax(16rem, min-content));
+      grid-template-rows: repeat(5, minmax(18rem, min-content));
     }
 
     @media screen and (max-width: 720px) {
       grid-template-columns: 1fr;
-      grid-template-rows: repeat(8, minmax(16rem, min-content));
+      grid-template-rows: repeat(8, minmax(18rem, min-content));
     }
 
     @media screen and (max-width: 500px) {
-      padding: 1rem;
+      padding: 0.5rem;
     }
 
     .box {
@@ -100,7 +100,7 @@ const HomeContainer = styled.div`
 
       @media screen and (max-width: 1360px) {
         grid-column: 2 / span 2;
-        grid-row: 4 / span 2;
+        grid-row: 3 / span 4;
       }
 
       @media screen and (max-width: 900px) {
@@ -125,6 +125,7 @@ const HomeContainer = styled.div`
     .box_6 {
       @media screen and (max-width: 900px) {
         grid-column: 2 / span 1;
+        grid-row: 3 / span 1;
       }
 
       @media screen and (max-width: 720px) {
@@ -137,10 +138,11 @@ const HomeContainer = styled.div`
       grid-row: 3 / span 3;
 
       @media screen and (max-width: 1360px) {
-        grid-row: 3 / span 1;
+        grid-column: 1 / span 1;
+        grid-row: 3 / span 2;
       }
 
-      @media screen and (max-width: 900px) {
+      @media screen and (max-width: 720px) {
         display: none;
       }
     }
@@ -150,7 +152,7 @@ const HomeContainer = styled.div`
 
       @media screen and (max-width: 1360px) {
         grid-column: 1 / span 1;
-        grid-row: 3 / span 1;
+        grid-row: 5 / span 1;
       }
 
       @media screen and (max-width: 900px) {
@@ -164,10 +166,14 @@ const HomeContainer = styled.div`
 
     .box_9 {
       grid-row: 4 / span 2;
-
       @media screen and (max-width: 1360px) {
         grid-column: 1 / span 1;
-        grid-row: 3 / span 1;
+        grid-row: 6 / span 1;
+      }
+
+      @media screen and (max-width: 900px) {
+        grid-column: 2 / span 1;
+        grid-row: 4 / span 1;
       }
 
       @media screen and (max-width: 720px) {

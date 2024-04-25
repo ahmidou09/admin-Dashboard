@@ -20,12 +20,21 @@ const UsersBoxContainer = styled.div`
       .user_image {
         width: 6rem;
 
+        @media screen and (max-width: 720px) {
+          width: 4rem;
+        }
+
         img {
           border: 2px solid var(--color-teal-1);
           width: 5rem;
           height: 5rem;
           border-radius: 50%;
           object-fit: cover;
+
+          @media screen and (max-width: 720px) {
+            width: 3rem;
+            height: 3rem;
+          }
         }
       }
 
@@ -34,6 +43,10 @@ const UsersBoxContainer = styled.div`
           font-size: 1.4rem;
           color: var(--color-white-2);
           font-weight: 200;
+
+          @media screen and (max-width: 720px) {
+            font-size: 1.2rem;
+          }
         }
 
         .user_email {

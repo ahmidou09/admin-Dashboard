@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import useIsMobile from "../../hooks/useIsMobile";
 
 const FooterContiner = styled.div`
   display: flex;
@@ -17,10 +18,20 @@ const FooterContiner = styled.div`
 `;
 
 function Footer() {
+  const isMobile = useIsMobile();
   return (
     <FooterContiner>
-      <span>AHMIDOU EL MEHDI</span>
-      <span>Copyright © 2022. All rights reserved.</span>
+      {!isMobile ? (
+        <>
+          <span>AHMIDOU EL MEHDI</span>
+          <span>Copyright © 2024. All rights reserved.</span>
+        </>
+      ) : (
+        <>
+          <span>MEHDI</span>
+          <span>Copyright © 2024.</span>
+        </>
+      )}
     </FooterContiner>
   );
 }

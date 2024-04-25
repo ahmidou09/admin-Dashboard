@@ -6,12 +6,9 @@ const PaginationContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
-  position: absolute;
   bottom: 2rem;
-  left: 50%;
-  transform: translateX(-50%);
   width: 100%;
-  padding: 0 4rem;
+  padding: 2rem 4rem;
 
   .page-info {
     font-size: 1.4rem;

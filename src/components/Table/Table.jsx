@@ -70,10 +70,9 @@ const Tbody = styled.tbody`
 const PaginationWrapper = styled.div`
   padding: 2rem;
   display: flex;
+  align-items: center;
+  justify-content: flex-end;
   gap: 0rem;
-  position: fixed;
-  bottom: 10rem;
-  right: 5rem;
 `;
 
 const PaginationButton = styled.button`

@@ -76,7 +76,7 @@ const generateFakeData = () => {
 
     data.push({
       id: i + 1,
-      image: `https://avatar.iran.liara.run/public/${i + 1}.png`,
+      image: `https://avatar.iran.liara.run/public/1.png`,
       fullName: fullName,
       username: `user${i + 1}`,
       phone: `+${Math.floor(Math.random() * 10000)}3456789${i + 1}`,

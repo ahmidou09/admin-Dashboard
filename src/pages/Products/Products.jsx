@@ -62,7 +62,7 @@ function Products() {
       <TableItems
         data={electronicData}
         columns={productColumns}
-        renderItem={(product) => <BodyProduct product={product} />}
+        renderItem={(product) => <BodyProduct key={product.id} product={product} />}
         itemLink="users"
         itemPerPage="8"
       />

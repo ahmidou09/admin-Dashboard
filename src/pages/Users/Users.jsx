@@ -62,7 +62,7 @@ function Users() {
       <TableItems
         data={userData}
         columns={userColumns}
-        renderItem={(user) => <BodyUser user={user} />}
+        renderItem={(user) => <BodyUser key={user.id} user={user} />}
         itemPerPage="8"
       />
     </UsersContainer>

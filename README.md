@@ -44,7 +44,7 @@ Our Admin Dashboard is a robust interface designed for effective data management
 
 ### 🚀 Live Demo <a name="live-demo"></a>
 
-[Visit the live demo](https://662ac61d11706911871f2ef9--admin-dashboard-mehdi.netlify.app/)
+[Visit the live demo](https://admin-dashboard-bay-tau-86.vercel.app/)
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
